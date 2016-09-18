@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Front End Skeleton | 422 Studios</title>
+    <meta name="referrer" content="always"/>
+    <meta name="keywords" content="design, development, websites, web, apps, applications, agency, strategy, dallas, fort worth"/>
+    <meta name="geo.region" content="Texas"/>
+    <meta name="geo.position" content="32.7563801,-97.3571515"/>
+    <meta name="geo.placename" content="422 Studios"/>
+
+    <!-- Styles -->
+    <link href="dist/css/plugins.css" rel="stylesheet">
+    <link href="dist/css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <!--Wrapper -->
+    <div class="wrapper">
+
+      <!-- Introduction. Delete all of this except the wrapper (unless you don't even want that) when you start a new project. -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1>422 Studios Front End Skeleton</h1>
+          <p>This is a gulp / bower based front end skeleton pre-installed with Jquery and Bootstrap. We utilize bower to download dependencies like jquery, boostrap js and more. Check out <a href="https://bower.io/" target="_blank">https://bower.io/</a> for more information on bower and <a href="http://gulpjs.com/" target="_blank">http://gulpjs.com/</a></p>
+        </div>
+      </div>
+
+      <!-- Container -->
+      <div class="container">
+        <h4>Getting Started</h4>
+        <div class="alert alert-info">You need to have the following things globally installed on your local machine. You will only run through this setup once, then its good to go for creating as many projects with the 422 Frontend Skeleton as you'd like on your local machine. If you have previously run this setup, <a href="#next" class="alert-link">skip to the next section.</a></div>
+        <ol>
+          <li><strong>Install Node.js &amp; NPM</strong> You need to have Node.js and NPM installed on your machine. Follow these instructions: <a href="https://docs.npmjs.com/getting-started/installing-node">https://docs.npmjs.com/getting-started/installing-node</a></li>
+          <li><strong>Install Grunt</strong> Once NPM is installed you need Grunt installed on your machine globally. Run "sudo npm install -global grunt" (minus sudo on windows).</li>
+          <li><strong>Install Gulp</strong> You also need the Gulp CLI installed locally on your machine. Run "sudo npm install -global gulp-cli" (minus sudo on windows)</li>
+        </ol>
+        <hr />
+        <span id="next"></span>
+        <div class="alert alert-info">
+          The following applies to each time that you start a new project with this skeleton.
+        </div>
+        <ol>
+          <li><strong>Customize Package.json"</strong> Open "package.json" in the root directory. Update the name, version, description, keywords and author if you desire, this is not a required step.</li>
+          <li><strong>Check for outdated NPM Packages</strong> Via Terminal or Git Bash, change into your project directory. Run the command "npm outdated". This command should return nothing. If nothing returns, then you are good to go and you can begin your project.</li>
+          <li><strong>Update NPM Packages if Necessary</strong> If something is returned from the above output it means that some of the NPM packages used in the skeleton are outdated. At your own risk, run "npm update" to update all packages. This may or may not cause unexpected errors or complications which will require some "on your own" troubleshooting to address and fix.</li>
+        </ol>
+        <hr />
+        <h4>Downloading &amp; Installing Bower Packages</h4>
+        <p>Bower packages will download and install to "components/libs". You will need to open the "gulpfile.js" file in the root folder and scroll to the section "uglify plugins" for more information on adding bower plugins to the automatic "build system" created with gulp.</p>
+        <p>The short version is that you will need to open "gulpfile.js" every time you download a bower component and add the CSS / JS to the appropriate gulp sections. It's super easy, so don't be intimidated. A quick read through of the gulp file is probably enough to understand it fully.</p>
+        <hr />
+        <h4>Compiling JS and SCSS Changes</h4>
+        <p>All that you have to do to start gulp is simply use the git bash application on windows or terminal on mac os and change into your project directory. Then use the command, "gulp watch". From there, any changes in the "components/scss" and "components/js" folders will trigger a full build of all bower components and custom js / scss files. They get compiled to 4 js / css files in the "dist" folder. The index.html template is already set up to include the appropriate files.</p>
+        <p><strong>SCSS Instructions</strong> The grunt build system for this template looks to the "components/scss/style.scss" file for its target. You may add imports to this file if you want. We have set up a "libs" folder for things like the "animate.css" library or other css libraries not downloaded via bower. Look for bower libraries first before installing your own here because the bower libraries are easier to keep up with and who doesn't want to be a hipster and use the command line :D We have also included a "structure" folder to put app-wide styles and a "partials" folder for individual layouts. This is how we do it at 422 Studios, but you can change the folders and import setup inside the "components/scss" folder if you want to do it your own way, just make sure to make the appropriate changes to the gulp target, "components/scss/style.scss". As a bonus, we've even included some of the standard scss files that we use for variables, wrapper set up and more. Feel free to delete and start over if you feel it necessary.</p>
+        <hr />
+        <h4>Images &amp; Fonts</h4>
+        <p>To follow the convention of the template, store your images and font files in the "dist/images" / "dist/fonts" folders.</p>
+      </div>
+      <!-- End Container -->
+    </div>
+    <!-- End Wrapper -->
+
+    <!-- Scripts -->
+    <script src="dist/js/plugins.min.js"></script>
+    <script src="dist/js/app.min.js"></script>
+  </body>
+</html>

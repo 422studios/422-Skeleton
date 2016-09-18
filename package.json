@@ -1,0 +1,32 @@
+{
+  "name": "422-studios-frontend-skeleton",
+  "version": "1.0.0",
+  "description": "This is the frontend web development skeleton used by 422 studios. It includes gulp and bower.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "bower",
+    "sass",
+    "browserify",
+    "422",
+    "studios",
+    "framework",
+    "skeleton",
+    "starter"
+  ],
+  "author": "Daniel White of 422 Studios.",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-order": "^1.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}

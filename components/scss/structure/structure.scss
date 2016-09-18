@@ -1,0 +1,28 @@
+/*
+ |--------------------------------------------------------------------------=
+ | Set up the fonts
+ |--------------------------------------------------------------------------
+*/
+
+body {
+	background-color: $bodyBgColor;
+	font-family: $bodyFont;
+	font-size: $bodyFontSize;
+	font-weight: $regular;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	transition: all .25s ease;
+	&:hover, &:active {
+		text-decoration: none;
+	}
+}
+
+.wrapper {
+	width:100%;
+	max-width: $wrapperWidth;
+	margin:0px auto;
+	background: $wrapperBgColor;
+}
