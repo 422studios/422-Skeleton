@@ -5,12 +5,14 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var order = require('gulp-order');
+var notify = require('gulp-notify');
 
 // Gulp task for sass
 gulp.task('sass', function () {
   gulp.src('components/scss/style.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('dist/css'));
+    .pipe(gulp.dest('dist/css'))
+    .pipe(notify("Gulp build successful!"));
 });
 
 // Gulp uglify task
@@ -34,7 +36,7 @@ var allPlugins = [
 
 gulp.task('uglifyPlugins', function() {
   return gulp.src(allPlugins)
-    .pipe(order(allPlugins))
+    .pipe(order(allPlugins, { base: './' }))
     .pipe(concat('plugins.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist/js'));
