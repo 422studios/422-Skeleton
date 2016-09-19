@@ -6,13 +6,24 @@ var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var order = require('gulp-order');
 var notify = require('gulp-notify');
+var sourcemaps = require('gulp-sourcemaps');
+var jshint = require('gulp-jshint');
 
 // Gulp task for sass
 gulp.task('sass', function () {
   gulp.src('components/scss/style.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('dist/css'))
     .pipe(notify("Gulp build successful!"));
+});
+
+//Lint javascript
+gulp.task('lint', function() {
+  return gulp.src('components/js/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('default', { verbose: true }));
 });
 
 // Gulp uglify task
@@ -59,7 +70,7 @@ gulp.task('minifyPlugins', function() {
 });
 
 // Runs both tasks at once
-gulp.task('build', ['uglifyPlugins', 'minifyPlugins', 'compress', 'sass']);
+gulp.task('build', ['lint', 'uglifyPlugins', 'minifyPlugins', 'compress', 'sass']);
 
 // Watching files
 gulp.task('watch', function() {
